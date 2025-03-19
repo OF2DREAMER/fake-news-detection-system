@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Fake News Prediction</h1>
+        <form method="POST" action="/predict" id="newsForm">
+            <textarea name="news_text" id="news_text" placeholder="Enter news text here..." required></textarea>
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction_label %}
+        <div class="result">
+            <h2>Prediction: {{ prediction_label }}</h2>
+        </div>
+        {% endif %}
+        
+        <form method="POST" action="/train">
+            <button type="submit">Retrain Model with New Data</button>
+        </form>
+        
+        {% if message %}
+        <div class="result">
+            <h2>{{ message }}</h2>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
