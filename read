@@ -1,0 +1,17 @@
+# requirement:
+1. flask
+pip install flask
+2. python
+"https://www.python.org/downloads/"  install in your local system
+note: select "bin to path"
+
+# steps to run this project
+
+1. open cmd  terminal
+2. go project directory
+cd  "C:\FAKE NEWS DETECTION"
+3. python app.py
+
+4. open: Running on http://127.0.0.1:5000
+
+
